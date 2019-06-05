@@ -1,0 +1,19 @@
+// NPC Spawns for map square 50,49
+// Format: npcTypeId - level,localX,localY
+8828 - 0,2,38 //giant rat 
+8828 - 0,32,35 //giant rat 
+8828 - 0,27,57 //giant rat  
+8828 - 0,34,51 //giant rat 
+8829 - 0,31,49 //giant rat
+8829 - 0,37,45 //giant rat
+9632 - 0,44,61 //Ilona (varbit 10826 55)
+12348 - 0,21,59//giant rat
+12348 - 0,35,36//giant rat
+
+
+
+
+
+
+
+

@@ -34,15 +34,67 @@ import { delLocation, getLocRotation, getLocShape } from 'shared/map';
 
 import { runWoodcuttingAction, WoodcuttingAction } from './logic';
 
-/**
- * @author Im Frizzy <skype:kfriz1998>
- * @author Frosty Teh Snowman <skype:travis.mccorkle>
- * @author Arthur <skype:arthur.behesnilian>
- * @author Kayla <skype:ashbysmith1996>
- * @author Sundays211
- * @since 05/11/2014
- */
 //Regular trees
+_events.bindEventListener(EventType.OPLOC1, 1282, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 1347);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 1286, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 1351);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 1289, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 1353);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 1291, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 23054);
+});
+
+_events.bindEventListener(EventType.OPLOC1, [ 1330, 1331, 1332 ], (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 1341);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 1383, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 1358);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 3300, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 11865);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 4818, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 4819);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 4820, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 4821);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 9354, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 11059);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 9355, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 11862);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 9366, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 11864);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 9387, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 10951);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 11866, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 9389);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 24168, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 24169);
+});
+
 _events.bindEventListener(EventType.OPLOC1, 38760, (ctx) => {
 	chopTree(ctx.player, ctx.location, NORMAL_TREE, 40350);
 });
@@ -79,28 +131,6 @@ _events.bindEventListener(EventType.OPLOC1, 38789, (ctx) => {
 	chopTree(ctx.player, ctx.location, NORMAL_TREE, 40358);
 });
 
-//Swamp trees
-_events.bindEventListener(EventType.OPLOC1, 9387, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 10951);
-});
-
-_events.bindEventListener(EventType.OPLOC1, 9354, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 11059);
-});
-
-_events.bindEventListener(EventType.OPLOC1, 9366, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 11864);
-});
-
-_events.bindEventListener(EventType.OPLOC1, 9355, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 11862);
-});
-
-_events.bindEventListener(EventType.OPLOC1, 3300, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 11865);
-});
-
-//Dead trees
 _events.bindEventListener(EventType.OPLOC1, 47594, (ctx) => {
 	chopTree(ctx.player, ctx.location, NORMAL_TREE, 47595);
 });
@@ -133,59 +163,20 @@ _events.bindEventListener(EventType.OPLOC1, 69144, (ctx) => {
 	chopTree(ctx.player, ctx.location, NORMAL_TREE, 69146);
 });
 
-_events.bindEventListener(EventType.OPLOC1, 11866, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 9389);
+_events.bindEventListener(EventType.OPLOC1, 70060, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 70062);
 });
 
-_events.bindEventListener(EventType.OPLOC1, 1282, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 1347);
+_events.bindEventListener(EventType.OPLOC1, 70063, (ctx) => {
+	chopTree(ctx.player, ctx.location, NORMAL_TREE, 70065);
 });
 
-_events.bindEventListener(EventType.OPLOC1, 1383, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 1358);
-});
-
-_events.bindEventListener(EventType.OPLOC1, 1286, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 1351);
-});
-
-_events.bindEventListener(EventType.OPLOC1, 1289, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 1353);
-});
-
-_events.bindEventListener(EventType.OPLOC1, 1291, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 23054);
-});
-
-//Dying tree
-_events.bindEventListener(EventType.OPLOC1, 24168, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 24169);
-});
-
-//Jungle tree
-_events.bindEventListener(EventType.OPLOC1, 4818, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 4819);
-});
-
-_events.bindEventListener(EventType.OPLOC1, 4820, (ctx) => {
-	chopTree(ctx.player, ctx.location, NORMAL_TREE, 4821);
-});
-
-//Alchey tree
+//achey
 _events.bindEventListener(EventType.OPLOC1, 69554, (ctx) => {
 	chopTree(ctx.player, ctx.location, ACHEY_TREE, 69555);
 });
 
-//Eucalyptus
-_events.bindEventListener(EventType.OPLOC1, 70068, (ctx) => {
-	chopTree(ctx.player, ctx.location, EUCALYPTUS_TREE, 70070);
-});
-
-_events.bindEventListener(EventType.OPLOC1, 70071, (ctx) => {
-	chopTree(ctx.player, ctx.location, EUCALYPTUS_TREE, 70073);
-});
-
-//Oak
+//oak
 _events.bindEventListener(EventType.OPLOC1, 38731, (ctx) => {
 	chopTree(ctx.player, ctx.location, OAK_TREE, 38741);
 });
@@ -202,6 +193,15 @@ _events.bindEventListener(EventType.OPLOC1, [38616, 38627, 58006], (ctx) => {
 //Maple
 _events.bindEventListener(EventType.OPLOC1, 51843, (ctx) => {
 	chopTree(ctx.player, ctx.location, MAPLE_TREE, 54766);
+});
+
+//eucalyptus
+_events.bindEventListener(EventType.OPLOC1, 70068, (ctx) => {
+	chopTree(ctx.player, ctx.location, EUCALYPTUS_TREE, 70070);
+});
+
+_events.bindEventListener(EventType.OPLOC1, 70071, (ctx) => {
+	chopTree(ctx.player, ctx.location, EUCALYPTUS_TREE, 70073);
 });
 
 //Yew

@@ -1,0 +1,4 @@
+// NPC Spawns for map square 45,52
+// Format: npcTypeId - level,localX,localY
+895 - 0,45,27 //Boy (Quest Witch's House)
+896 - 0,16,35 //Witch (Quest Witch's House)

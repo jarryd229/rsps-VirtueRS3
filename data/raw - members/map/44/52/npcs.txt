@@ -1,0 +1,29 @@
+// NPC Spawns for map square 44,52
+// Format: npcTypeId - level,localX,localY
+41 - 0,37,40 //Chicken level 1
+41 - 0,34,40 //Chicken level 1
+41 - 0,35,42 //Chicken level 1
+41 - 0,36,42 //Chicken level 1
+41 - 0,37,45 //Chicken level 1
+41 - 0,30,46 //Chicken level 1
+41 - 0,34,43 //Chicken level 1
+89 - 0,23,42 //Unicorn level 15
+89 - 0,45,47 //Unicorn level 15
+89 - 0,48,52 //Unicorn level 15
+89 - 0,35,50 //Unicorn level 15
+216 - 0,35,20//High Priest
+222 - 0,34,26//Monk level 14
+222 - 0,35,17//Monk level 14
+222 - 0,27,18//Monk level 14
+656 - 0,6,46 //Cave monk
+658 - 0,11,8 //Monk of Entrana
+2391 - 0,34,21 //Mysterious ghost
+2730 - 0,19,8 //Monk of Entrana
+2731 - 0,24,8 //Monk of Entrana
+3114 - 0,5,16 //Mazion
+4909 - 0,15,22 //Fritz the glassblower
+6108 - 0,31,59 //Entrana firebird level 1
+
+
+
+

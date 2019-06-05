@@ -1,0 +1,11 @@
+// NPC Spawns for map square 38,54
+// Format: npcTypeId - level,localX,localY
+16602 - 1,8,31 //gnome banker
+16602- 1,8,32 //gnome banker
+16604 - 1,16,24 //gnome banker
+16604 - 1,18,24 //gnome banker
+
+
+
+
+

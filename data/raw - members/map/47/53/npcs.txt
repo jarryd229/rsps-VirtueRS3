@@ -1,0 +1,4 @@
+// NPC Spawns for map square 47,53
+// Format: npcTypeId - level,localX,localY
+3282 - 0,0,50 //Engineer
+

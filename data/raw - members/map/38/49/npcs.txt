@@ -1,0 +1,7 @@
+// NPC Spawns for map square 38,49
+// Format: npcTypeId - level,localX,localY
+6127 - 0,35,47 //Greasycheeks
+6128 - 0,33,47 //Smellytoes
+6129 - 0,38,49 //Creakyknees
+6130 - 0,37,22 //Clothears
+

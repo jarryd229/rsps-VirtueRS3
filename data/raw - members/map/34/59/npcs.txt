@@ -1,0 +1,17 @@
+// NPC Spawns for map square 34,59
+// Format: npcTypeId - level,localX,localY
+182 - 0,18,30//Pirate
+183 - 0,29,38//Pirate
+4546 - 0,29,31//Jake
+4548 - 0,23,32//Wilson
+4552 - 0,35,39//Palmer
+4706 - 0,26,49//Moss giant
+4706 - 0,20,46//Moss giant
+4706 - 0,21,38//Moss giant
+4706 - 0,20,32//Moss giant
+4706 - 0,22,30//Moss giant
+4706 - 0,28,28//Moss giant
+4706 - 0,32,37//Moss giant
+4706 - 0,36,43//Moss giant
+4706 - 0,38,42//Moss giant
+4706 - 0,26,37//Moss giant

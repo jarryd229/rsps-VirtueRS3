@@ -1,0 +1,5 @@
+// NPC Spawns for map square 53,74
+// Format: npcTypeId - level,localX,localY
+16851 - 0,28,41 //Evil Bob
+16852 - 0,31,41 //Servant
+

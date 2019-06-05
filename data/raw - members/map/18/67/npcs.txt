@@ -1,0 +1,19 @@
+// NPC Spawns for map square 18,67
+// Format: npcTypeId - level,localX,localY
+14743 - 0,22,28 //Traiborn
+14744 - 0,22,30 //Sedridor
+14745 - 0,22,32 //Zavistic Rarve
+14746 - 0,29,35 //Aubury
+14747 - 0,22,34 //Thormac
+14748 - 0,22,31 //Wizard Distentor
+14750 - 0,31,26 //Wizard Acantha
+14751 - 0,33,30 //Wizard Vief
+14752 - 0,33,29 //Wizard Korvak
+14753 - 0,29,26 //Bogrog
+14754 - 0,28,35 //Zimberfizz
+14755 - 0,27,27 //Wizard Sioncorn
+14756 - 0,31,35 //Wizard Shug
+14757 - 0,28,27 //Sanfew
+14758 - 0,33,31 //Timmy
+14759 - 0,22,29 //Wizard Mizgog
+14760 - 0,22,27 //Isidor

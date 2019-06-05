@@ -1,0 +1,11 @@
+// NPC Spawns for map square 48,50
+// Format: npcTypeId - level,localX,localY
+708 - 0,1,50 //imp
+970 - 0,9,47 //Diango
+15567 - 0,19,35 //Fisherman
+
+
+
+
+
+

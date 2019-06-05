@@ -1,0 +1,8 @@
+// NPC Spawns for map square 25,70
+// Format: npcTypeId - level,localX,localY
+13650 - 0,6,30 //Jack Frost
+13642 - 0,5,32 //Queen of Snow
+13656 - 0,6,34 //Snow imp
+13637 - 0,9,33 //Snowman
+13647 - 1,42,55 //Stone spirit
+13648 - 0,40,19 //River spirit

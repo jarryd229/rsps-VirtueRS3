@@ -1,0 +1,4 @@
+// NPC Spawns for map square 57,56
+// Format: npcTypeId - level,localX,localY
+15784 - 0,32,39 //the botfinder general
+

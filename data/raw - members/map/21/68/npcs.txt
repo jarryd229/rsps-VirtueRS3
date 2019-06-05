@@ -1,0 +1,5 @@
+// NPC Spawns for map square 21,68
+// Format: npcTypeId - level,localX,localY
+14711 - 2,37,21 //Timmy
+14722 - 1,39,27 //Traiborn
+14723 - 0,37,28 //Sedridor

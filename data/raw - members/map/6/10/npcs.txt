@@ -1,0 +1,3 @@
+// NPC Spawns for map square 6,10
+// Format: npcTypeId - level,localX,localY
+7910 - 0,33,41//Muncher

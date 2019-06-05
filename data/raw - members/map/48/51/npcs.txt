@@ -1,0 +1,6 @@
+// NPC Spawns for map square 48,51
+// Format: npcTypeId - level,localX,localY
+4579 - 0,20,19 //potter
+16849 - 0,28,16 //evil bob
+16872 - 0,28,15 //mysterious old man
+

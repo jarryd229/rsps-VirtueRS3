@@ -1,0 +1,19 @@
+// NPC Spawns for map square 40,49
+// Format: npcTypeId - level,localX,localY
+267- 0,41,32 //Khazard Guard
+7504 - 0,28,38 //Khazard Guard
+7505 - 0,35,38 //Khazard Guard
+7506 - 0,29,38 //Khazard Guard
+7506 - 0,41,38 //Khazard Guard
+7507 - 0,39,38 //Khazard Guard
+7508 - 0,34,38 //Khazard Guard
+7509 - 0,40,38 //Khazard Guard
+7510 - 0,30,12 //Khazard Guard
+7511 - 0,29,12 //Khazard Guard
+7512 - 0,34,12 //Khazard Guard
+7513 - 0,35,12 //Khazard Guard
+7514 - 0,18,23 //Khazard Guard
+7515 - 0,18,28 //Khazard Guard
+7516 - 0,18,27 //null
+7517 - 0,18,24 //null
+

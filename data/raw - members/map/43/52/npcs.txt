@@ -1,0 +1,10 @@
+// NPC Spawns for map square 43,52
+// Format: npcTypeId - level,localX,localY
+106 - 0,58,49 //Black bear
+578 - 0,58,15 //Frincos
+2327 - 0,62,9 //Francis
+5049 - 0,57,27 //Auguste
+7562 - 0,58,5 //Tool leprechaun
+
+
+

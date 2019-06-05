@@ -1,0 +1,6 @@
+// NPC Spawns for map square 48,54
+// Format: npcTypeId - level,localX,localY
+2759 - 0,25,38 //banker
+2759 - 0,24,37 //banker
+553 - 0,24,35 //banker
+553 - 0,24,33 //banker

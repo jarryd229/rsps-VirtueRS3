@@ -1,0 +1,8 @@
+// NPC Spawns for map square 46,152
+// Format: npcTypeId - level,localX,localY
+127 - 0,21,47//Magic axe
+127 - 0,22,59//Magic axe
+127 - 0,12,62//Magic axe
+127 - 0,18,63//Magic axe
+127 - 0,11,47//Magic axe
+127 - 0,13,52//Magic axe

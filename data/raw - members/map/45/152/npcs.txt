@@ -1,0 +1,8 @@
+// NPC Spawns for map square 45,152
+// Format: npcTypeId - level,localX,localY
+108 - 0,61,50//Poison scorpion
+108 - 0,54,47//Poison scorpion
+108 - 0,55,42//Poison scorpion
+108 - 0,50,25//Poison scorpion
+108 - 0,56,31//Poison scorpion
+

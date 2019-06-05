@@ -1,0 +1,7 @@
+// NPC Spawns for map square 24,70
+// Format: npcTypeId - level,localX,localY
+13641 - 0,62,34 //Antipodean squirrel
+13643 - 0,63,32 //Queen of Sunrise
+13651 - 0,62,30 //Easter Bunny
+13655 - 0,62,27 //Leprechaun
+13649 - 2,14,53 //Cloud spirit

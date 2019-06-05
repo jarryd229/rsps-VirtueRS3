@@ -1,0 +1,29 @@
+// NPC Spawns for map square 45,54
+// Format: npcTypeId - level,localX,localY
+1192 - 0,49,39 //rabbit
+1192 - 0,55,41 //rabbit
+1192 - 0,57,37 //rabbit
+14998 - 0,5,35 //cow
+14998 - 0,6,28 //cow
+14999 - 0,2,34 //cow
+14999 - 0,3,27 //cow
+14999 - 0,5,30 //cow
+14999 - 0,7,34 //cow
+14999 - 0,8,30 //cow
+15001 - 0,7,9 //farmer
+15002 - 0,4,6 //farmer
+15014 - 0,49,29 //herbalist
+15048 - 0,46,46 //priest
+15048 - 0,48,43 //priest
+15049 - 0,48,46 //priest
+15049 - 0,48,44 //priest
+15049 - 0,44,44 //priest
+15051 - 0,40,13 //chicken
+15051 - 0,41,22 //chicken
+15052 - 0,40,20 //chicken
+15053 - 0,38,22 //chicken
+15054 - 0,34,17 //chicken
+15054 - 0,40,17 //chicken
+
+
+

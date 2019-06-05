@@ -1,0 +1,5 @@
+// NPC Spawns for map square 48,49
+// Format: npcTypeId - level,localX,localY
+16186 - 0,29,33 //Wizard Valina
+16195 - 0,20,3 //Wizard
+

@@ -1,0 +1,8 @@
+// NPC Spawns for map square 40,50
+// Format: npcTypeId - level,localX,localY
+281 - 0,46,17 //Monk level5
+281 - 0,48,9 //Monk level5
+281 - 0,58,9 //Monk level5
+281 - 1,35,10 //Monk level5
+5139 - 0,47,60 //ferret varbit 13931 40 to see
+8677 - 0,55,59 //chuck varbit 13734 130,135 or 140 to see

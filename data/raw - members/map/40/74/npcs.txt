@@ -1,0 +1,15 @@
+// NPC Spawns for map square 40,74
+// Format: npcTypeId - level,localX,localY
+16857 - 0,39,39 //freaky forester
+16858 - 0,45,41 //pheasant one tailed
+16858 - 0,37,43 //pheasant one tailed
+16858 - 0,39,38 //pheasant one tailed
+16859 - 0,49,36 //pheasant two tailed
+16859 - 0,38,41 //pheasant two tailed
+16859 - 0,46,42 //pheasant two tailed
+16860 - 0,47,39 //pheasant three tailed
+16860 - 0,40,41 //pheasant three tailed
+16860 - 0,43,33 //pheasant three tailed
+16861 - 0,49,38 //pheasant four tailed
+16861 - 0,51,39 //pheasant four tailed
+16861 - 0,43,38 //pheasant four tailed

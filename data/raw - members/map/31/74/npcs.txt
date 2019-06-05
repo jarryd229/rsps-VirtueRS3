@@ -1,0 +1,7 @@
+// NPC Spawns for map square 31,74
+// Format: npcTypeId - level,localX,localY
+1056 - 0,27,26 //Mime
+1057 - 0,31,20 //Strange watcher 1
+1058 - 0,28,18 //Strange watcher 2
+1059 - 0,22,19 //Strange watcher 3
+
