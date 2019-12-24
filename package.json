@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "core-js": "^2.5.7",
-    "npm": "^5.6.0",
+    "npm": "^6.13.4",
     "promise-polyfill": "^7.1.2",
     "regenerator-runtime": "^0.12.0"
   }
