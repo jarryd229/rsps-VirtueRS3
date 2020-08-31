@@ -67,6 +67,7 @@ import org.virtue.game.entity.player.stat.Stat;
 import org.virtue.game.entity.player.stat.StatManager;
 import org.virtue.game.entity.player.var.VarContainer;
 import org.virtue.game.map.CoordGrid;
+import org.virtue.game.parser.Parser;
 import org.virtue.game.parser.ParserType;
 import org.virtue.network.protocol.message.ResponseTypeMessage;
 import org.virtue.network.protocol.message.login.LoginRequestMessage;
@@ -83,7 +84,7 @@ import org.w3c.dom.NodeList;
  * @author Im Frizzy <skype:kfriz1998>
  * @since Sep 26, 2014
  */
-public class XmlParser {
+public class XmlParser implements Parser {
 	
 	/**
 	 * The {@link Logger} instance
@@ -98,16 +99,7 @@ public class XmlParser {
 	
 	private static final int EXCHANGE_VERSION = 2;
 	
-	private EnumMap<ParserType, File> pathLookup = new EnumMap<>(ParserType.class);
 	
-	public XmlParser (Properties properties) {
-		for (ParserType type : ParserType.values()) {
-			File path = FileUtility.parseFilePath(type.getPath(), properties);
-			pathLookup.put(type, path);
-			logger.info("Using path {} for type {}", path, type);
-		}
-	}
-
 	public void saveObjectDefinition(Object object, String file, ParserType type) {
 			DocumentBuilderFactory docFactory;
 			DocumentBuilder docBuilder;
@@ -674,7 +666,7 @@ public class XmlParser {
 				Transformer transformer = transformerFactory.newTransformer();
 				transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 				DOMSource source = new DOMSource(document);
-				StreamResult result = new StreamResult(new File(pathLookup.get(type),  file + ".xml"));
+				StreamResult result = new StreamResult(new File(type.getPath(),  file + ".xml"));
 				transformer.transform(source, result);
 			} catch (Exception e) {
 			}
@@ -687,12 +679,12 @@ public class XmlParser {
 				try {
 					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 					DocumentBuilder builder = factory.newDocumentBuilder();
-					File file = new File(pathLookup.get(type), request.getUsername() + ".xml");
+					File file = new File(type.getPath(), request.getUsername() + ".xml");
 					if (!file.exists()) {
 //						System.err.println("Could not find character file!");
 //						return null;
 					}
-					Document doc = builder.parse(new File(pathLookup.get(type), request.getUsername() + ".xml"));
+					Document doc = builder.parse(new File(type.getPath(), request.getUsername() + ".xml"));
 	
 					doc.getDocumentElement().normalize();
 	
@@ -871,7 +863,7 @@ public class XmlParser {
 					
 					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 					DocumentBuilder builder = factory.newDocumentBuilder();
-					Document doc = builder.parse(new File(pathLookup.get(type), name + ".xml"));
+					Document doc = builder.parse(new File(type.getPath(), name + ".xml"));
 				
 					doc.getDocumentElement().normalize();
 					
@@ -968,7 +960,7 @@ public class XmlParser {
 					
 					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 					DocumentBuilder builder = factory.newDocumentBuilder();
-					Document doc = builder.parse(new File(pathLookup.get(type), name + ".xml"));
+					Document doc = builder.parse(new File(type.getPath(), name + ".xml"));
 				
 					doc.getDocumentElement().normalize();
 					
@@ -1013,7 +1005,7 @@ public class XmlParser {
 					
 					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 					DocumentBuilder builder = factory.newDocumentBuilder();
-					Document doc = builder.parse(new File(pathLookup.get(type), name + ".xml"));
+					Document doc = builder.parse(new File(type.getPath(), name + ".xml"));
 				
 					doc.getDocumentElement().normalize();
 
@@ -1056,7 +1048,7 @@ public class XmlParser {
 					
 					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 					DocumentBuilder builder = factory.newDocumentBuilder();
-					Document doc = builder.parse(new File(pathLookup.get(type), name + ".xml"));
+					Document doc = builder.parse(new File(type.getPath(), name + ".xml"));
 				
 					doc.getDocumentElement().normalize();
 					
@@ -1106,7 +1098,7 @@ public class XmlParser {
 					
 					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 					DocumentBuilder builder = factory.newDocumentBuilder();
-					Document doc = builder.parse(new File(pathLookup.get(type), name + ".xml"));
+					Document doc = builder.parse(new File(type.getPath(), name + ".xml"));
 				
 					doc.getDocumentElement().normalize();
 
@@ -1131,7 +1123,7 @@ public class XmlParser {
 				try {
 					ExchangeOffer[][] offers = new ExchangeOffer[3][8];
 					String name = (String) object;
-					File file = new File(pathLookup.get(type), name + ".xml");
+					File file = new File(type.getPath(), name + ".xml");
 					if (!file.exists()) {
 						return null;
 					}
@@ -1198,7 +1190,7 @@ public class XmlParser {
 					
 					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 					DocumentBuilder builder = factory.newDocumentBuilder();
-					Document doc = builder.parse(new File(pathLookup.get(type), name + ".xml"));
+					Document doc = builder.parse(new File(type.getPath(), name + ".xml"));
 				
 					doc.getDocumentElement().normalize();
 					
@@ -1224,7 +1216,7 @@ public class XmlParser {
 					
 					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 					DocumentBuilder builder = factory.newDocumentBuilder();
-					Document doc = builder.parse(new File(pathLookup.get(type), clanID + ".xml"));
+					Document doc = builder.parse(new File(type.getPath(), clanID + ".xml"));
 				
 					doc.getDocumentElement().normalize();
 					
@@ -1356,6 +1348,6 @@ public class XmlParser {
 	}
 
 	public boolean objectFileExists(String name, ParserType type) {
-		return new File(pathLookup.get(type), name + ".xml").exists();
+		return new File(type.getPath(), name + ".xml").exists();
 	}
 }

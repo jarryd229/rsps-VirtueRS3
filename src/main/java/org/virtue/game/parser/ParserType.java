@@ -27,15 +27,24 @@ package org.virtue.game.parser;
  * @since Sep 30, 2014
  */
 public enum ParserType {
-	CHARACTER("${character.folder}/game/"), 
-	FRIEND("${character.folder}/friend/"),
-	IGNORE("${character.folder}/ignore/"),
-	VAR("${character.folder}/var/"), 
-	INV("${character.folder}/inv/"), 
-	SKILL("${character.folder}/skill/"),
-	EXCHANGE("${character.folder}/exchange/"),
-	LAYOUT("${character.folder}/layout/"),
-	CLAN_SETTINGS("${clan.folder}/settings/");
+    CHARACTER("./repository/character/game/"), 
+	FRIEND("./repository/character/friend/"), 
+	IGNORE("./repository/character/ignore/"), 
+	VAR("./repository/character/var/"), 
+	INV("./repository/character/inv/"), 
+	SKILL("./repository/character/skill/"),
+	EXCHANGE("./repository/character/exchange/"),
+	LAYOUT("./repository/character/layout/"),
+	CLAN_SETTINGS("./repository/clan/settings/");
+	//CHARACTER("${character.folder}/game/"), 
+	//FRIEND("${character.folder}/friend/"),
+	//IGNORE("${character.folder}/ignore/"),
+	//VAR("${character.folder}/var/"), 
+	//INV("${character.folder}/inv/"), 
+	//SKILL("${character.folder}/skill/"),
+	//EXCHANGE("${character.folder}/exchange/"),
+	//LAYOUT("${character.folder}/layout/"),
+	//CLAN_SETTINGS("${clan.folder}/settings/");
 	
 	String path;
 	

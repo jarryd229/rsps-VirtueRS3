@@ -23,6 +23,7 @@ package org.virtue.game.parser;
 
 import java.util.Properties;
 
+import org.virtue.Constants;
 import org.virtue.game.parser.xml.XmlParser;
 import org.virtue.game.parser.mysql.MySQLParser;
 /**
@@ -41,14 +42,20 @@ public class ParserRepository {
 	 */
 	private MySQLParser mysql;
         
+    private Parser activeParser;
         
 	
 	/**
 	 * Loads the possible parsers into the repo
 	 */
-	public void load(Properties properties) throws Exception {
-		xml = new XmlParser(properties);
-        mysql = new MySQLParser(properties);
+	public void load() throws Exception {
+        xml = new XmlParser();        
+        mysql = new MySQLParser();
+        if(Constants.Mysql) {
+            activeParser = (Parser) mysql;
+        } else {
+            activeParser = (Parser) xml;
+	    }   
 	}
 	
 	public <T> T loadObject (Class<T> outputType, String name) {
@@ -60,11 +67,8 @@ public class ParserRepository {
 	 * Gets the current active parser
 	 * @return The active parser
 	 */
-	public XmlParser getParser () {
-		return xml;
-	}
-        
-   // public MySQLParser getParser () {
-	//    return mysql;
-	//}	
+  
+    public Parser getParser () {
+		return activeParser;
+	}	
 }

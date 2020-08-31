@@ -291,7 +291,7 @@ public class Virtue {
 		event = new EventRepository();
 		event.load();
 		parser = new ParserRepository();
-		parser.load(properties);
+		parser.load();
 		widget = new WidgetRepository();
 		widget.load();
 		
