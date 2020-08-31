@@ -572,6 +572,23 @@ function getEmptyId(locTypeId: number) {
 
 		case 94219://soft clay
 			return 94217;
+			
+			
+		case 32439://mithril
+		case 32436://adamantite
+		case 33079://runite
+			return 33401;	
+			
+			
+		case 32438://mithril
+		case 32435://adamantite
+		case 33078://runite
+			return 33400;
+			
+
+		case 32440://mithril
+		case 32437://adamantite
+			return 33402;	
 
 		default:
 			return 3227;

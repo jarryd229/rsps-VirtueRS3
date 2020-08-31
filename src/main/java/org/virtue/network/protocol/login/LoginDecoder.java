@@ -34,6 +34,7 @@ import org.virtue.Constants;
 import org.virtue.network.protocol.message.login.LoginRequestMessage;
 import org.virtue.network.protocol.message.login.LoginTypeMessage;
 import org.virtue.utility.BufferUtility;
+import org.virtue.utility.Encryption;
 import org.virtue.utility.XTEACipher;
 import org.virtue.utility.ISAACCipher;
 import org.virtue.utility.text.Base37Utility;
@@ -126,7 +127,8 @@ public class LoginDecoder extends ByteToMessageDecoder {
 			//throw new ProtocolException("Invalid login hash: " + loginHash);
 
 		
-		String password = BufferUtility.readString(secureBuffer);
+		String bufferpassword = BufferUtility.readString(secureBuffer);
+		String password = Encryption.encryptSHA1(bufferpassword);
 
 		long[] loginSeeds = new long[2];
 		for (int i = 0; i < loginSeeds.length; i++) {
@@ -222,7 +224,8 @@ public class LoginDecoder extends ByteToMessageDecoder {
 		secureBuffer.readByte();
 		secureBuffer.readerIndex(secureBuffer.readerIndex() - 4);
 		
-		String password = BufferUtility.readString(secureBuffer);
+		String bufferpassword = BufferUtility.readString(secureBuffer);
+		String password = Encryption.encryptSHA1(bufferpassword);
 
 		long[] loginSeeds = new long[2];
 		for (int i = 0; i < loginSeeds.length; i++)

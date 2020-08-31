@@ -734,3 +734,68 @@ import { hasFinished } from '../quest';
         _events.bindEventListener(EventType.OPLOC1, 10090, async (ctx) => {
 		    await mesbox(ctx.player, "Mudskipper Point.<br> WARNING!<br> BEWARE OF THE MUDSKIPPERS!");
 	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 92938, (ctx) => {
+	        sendMessage(ctx.player, "South to Trahaearn.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 92939, (ctx) => {
+	        sendMessage(ctx.player, "North to Crwys.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 93004, (ctx) => {
+	        sendMessage(ctx.player, "South to Cadarn.");
+	    })
+		
+		_events.bindEventListener(EventType.OPLOC1, 93025, (ctx) => {
+	        sendMessage(ctx.player, "East to Cadarn.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 93040, (ctx) => {
+	        sendMessage(ctx.player, "West to Iorwerth.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 94208, (ctx) => {
+	        sendMessage(ctx.player, "North to Meilyr.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 94209, (ctx) => {
+	        sendMessage(ctx.player, "West to Ithell.");
+	    });
+		
+		
+		_events.bindEventListener(EventType.OPLOC1, 94210, (ctx) => {
+	        sendMessage(ctx.player, "East to Trahaearn.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 94223, (ctx) => {
+	        sendMessage(ctx.player, "North to Amlodd.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 94224, (ctx) => {
+	        sendMessage(ctx.player, "South to Iorwerth.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 94244, (ctx) => {
+	        sendMessage(ctx.player, "North to Hefin.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 94245, (ctx) => {
+	        sendMessage(ctx.player, "South to Ithell.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 94259, (ctx) => {
+	        sendMessage(ctx.player, "East to Meilyr.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 94260, (ctx) => {
+	        sendMessage(ctx.player, "West to Amlodd.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 94278, (ctx) => {
+	        sendMessage(ctx.player, "East to Crwys.");
+	    });
+		
+		_events.bindEventListener(EventType.OPLOC1, 94279, (ctx) => {
+	        sendMessage(ctx.player, "West to Hefin.");
+	    });

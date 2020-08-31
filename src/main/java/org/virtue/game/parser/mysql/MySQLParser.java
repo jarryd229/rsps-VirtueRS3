@@ -151,7 +151,11 @@ public class MySQLParser {
 			case CHARACTER:
                      
 				LoginRequestMessage request = (LoginRequestMessage) object;
-                                ResultSet rs = Virtue.database().executeQuery("SELECT * FROM character_saves_865 WHERE username = '" + request.getUsername() + "'");
+                               // ResultSet rs = Virtue.database().executeQuery("SELECT password FROM users WHERE username = '" + request.getUsername() + "'  ");
+							
+				ResultSet rs = Virtue.database().executeQuery("SELECT gender,users.password,character_saves_865.coords FROM users,character_saves_865 WHERE users.username = character_saves_865.username and users.username = '" + request.getUsername() + "' ");
+                                
+                                
 				try {         
                                        while (rs.next()) {
 						//String display = element.getElementsByTagName("display").item(0).getTextContent();
@@ -160,25 +164,24 @@ public class MySQLParser {
 						if (!password.equals(request.getPassword())) {
 							return ResponseTypeMessage.STATUS_INVALID_PASSWORD.getCode();
 						}
-                                                String[] loc = rs.getString("coords").split(",");
-							
+                        String[] loc = rs.getString("coords").split(",");
 						int mode = 2;
 						boolean sheathe = false;
 						
 						long login = Long.parseLong("1463147263931");
 						long savedChannel = 0L;
 						long clanHash = 0L;
-						int mute = rs.getInt("mute");
-						int ban = rs.getInt("banned");
-                                              if (ban == 1) {
+						int mute = 0;//rs.getInt("mute");
+						int ban = 0;//rs.getInt("banned");
+                        if (ban == 1) {
 							return ResponseTypeMessage.STATUS_BANNED.getCode();
 						}
-						int energy = rs.getInt("run_energy");
+						int energy = 100;//rs.getInt("run_energy");
 
 						int keys = 55;
 						int hearts = 55;
 						int loyatly = 55;
-						int coins = rs.getInt("runecoins");
+						int coins = 0;//rs.getInt("runecoins");
 						
 						int[] idk = null;
                                     
@@ -197,6 +200,9 @@ public class MySQLParser {
 						
                    
 						player.getModel().setGender(gender == 0 ? Gender.MALE : Gender.FEMALE);
+                                                
+                                                
+                                                
 						player.setCurrentTile(Integer.parseInt(loc[0]), Integer.parseInt(loc[1]), Integer.parseInt(loc[2]));
 						player.setLastTile(Integer.parseInt(loc[0]), Integer.parseInt(loc[1]), Integer.parseInt(loc[2]));
 						player.setLastLogin(login);
@@ -234,21 +240,31 @@ public class MySQLParser {
                                     logger.error("Error mysql loading skills ");
 				    return new ArrayList<>();
 				}    
-                            break;
-                            case VAR:
+                break;
+			
+            case VAR:
+					String varname = (String) object;
+					ResultSet varr = Virtue.database().executeQuery("SELECT * FROM character_var_865 WHERE username = '" + varname + "'");
 				try {
-					String name = (String) object;
+					while (varr.next()) {
+
 					Map<Integer, Object> varps = new HashMap<Integer, Object>();
-					
+					String[] key = varr.getString("key").split(",");
+					String[] var = varr.getString("var").split(",");
+                   
+                    for (int i = 0; i < 3; i++) {
+                        varps.put(Integer.parseInt(key[i]), Integer.parseInt(var[i]));   
+                    }
                     //Legacy interface
-					varps.put(3680, 3345417);
-					varps.put(3813, 0);
-                    varps.put(3814, 42);
-					
+					//varps.put(3680, 3345417);
+					//varps.put(3813, 0);
+                   // varps.put(3814, 42);
 					return varps;
+					}
 				} catch (Exception ex) {
 					return new HashMap<Integer, Object>();
 				}    
+				break;
 			case FRIEND:
 				try {
 					FriendsList.Data data = new FriendsList.Data();

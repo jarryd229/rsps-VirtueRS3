@@ -1,24 +1,3 @@
-/**
- * Copyright (c) 2017 Virtue Studios
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
 import { EventType } from 'engine/enums';
 import { Player } from 'engine/models';
 import _events from 'engine/events';
@@ -219,6 +198,10 @@ _events.bindEventListener(EventType.OPHELD1, 28227, function(ctx) {//SUPER_SARAD
 	foodheal(ctx.player, ctx.objId, 7800, null);
 }); 
 
+_events.bindEventListener(EventType.OPHELD1, 20270, function(ctx) {//Açaí
+    let healmsg = "Once you finish eating the açaí, the bowl magically returns to Guarani. Recycling the bowl avoids waste and helps to save the rainforest.";
+	foodheal(ctx.player, ctx.objId, 50, healmsg);
+});
 
 function foodheal(player: Player, item: number, healAmount: number, healText: string) {
 	ENGINE.freezeEntity(player, 2);

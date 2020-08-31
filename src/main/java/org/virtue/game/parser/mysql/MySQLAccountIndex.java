@@ -96,7 +96,7 @@ public class MySQLAccountIndex extends AccountIndex implements CachingParser {
 	 * @throws Exception
 	 */
 	public  void load() throws Exception {
-        ResultSet rs = Virtue.database().executeQuery("SELECT * FROM character_saves_865");
+        ResultSet rs = Virtue.database().executeQuery("SELECT * FROM users");
         try {         
         while (rs.next()) {
 	     boolean locked = false;
@@ -122,7 +122,7 @@ public class MySQLAccountIndex extends AccountIndex implements CachingParser {
                   String myUrl = "jdbc:mysql://localhost/runescape";
                   Class.forName("org.gjt.mm.mysql.Driver");
                   Connection conn = DriverManager.getConnection(myUrl, "root", "");
-                  String query = "UPDATE character_saves_865 SET userhash = ?, displayname = ?, server_rights = ?  WHERE userhash = '" + Long.toString(acc.getUserHash(), 16) + "'" ;
+                  String query = "UPDATE users SET userhash = ?, displayname = ?, server_rights = ?  WHERE userhash = '" + Long.toString(acc.getUserHash(), 16) + "'" ;
                   PreparedStatement preparedStmt = conn.prepareStatement(query);
                   preparedStmt.setString(1, ""+ Long.toString(acc.getUserHash(), 16) +"");
                   preparedStmt.setString(2, ""+ acc.getDisplayName() +"");
