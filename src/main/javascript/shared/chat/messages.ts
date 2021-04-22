@@ -1,6 +1,7 @@
 /* globals ENGINE, MesType */
 import { Player } from 'engine/models';
 import { MesType } from 'engine/enums/mes-type';
+import { isAdmin } from 'shared/util';
 
 export function sendMessage(player : Player, message : string, type? : MesType) {
 	if (type) {
@@ -15,8 +16,9 @@ export function sendSpamMessage (player : Player, message : string) {
 }
 
 export function sendDebugMessage (player : Player, message : string) {
-	//For now just send a regular message, though ultimately this will be sent to admins only
+	if (isAdmin(player)) {
 	ENGINE.sendMessage(player, message);
+	}	
 }
 
 export function sendCommandResponse (player : Player, message : string, console : boolean = false) {

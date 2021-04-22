@@ -130,7 +130,9 @@ _events.bindEventListener(EventType.IF_DRAG, _component(1473, 34), (ctx) => {
 		actionBar.dragOnto(ctx.player, hash, 0, 0, objId);
 		return;
 	} else if (getWidgetId(hash) != 1473) {//Item dragged somewhere other than backpack
-		defaultHandler(ctx, "backpack item");
+	    dropItem(player, objId, objCount, ctx.fromslot);
+		sendDebugMessage(ctx.player, "todo destroy item if Item can be destroyed");
+		//defaultHandler(ctx, "backpack item");
 		return;
 	}
 	switch (ctx.toComponent) {

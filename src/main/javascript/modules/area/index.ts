@@ -9,7 +9,6 @@ import './morytania';
 import './underground';
 import './ladders';
 import './location-picking';
-import './player-moderator-room';
 import './sign-posts';
 import './stairs';
 import './wilderness';

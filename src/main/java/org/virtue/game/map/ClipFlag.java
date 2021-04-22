@@ -1,24 +1,3 @@
-/**
- * Copyright (c) 2014 Virtue Studios
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions\:
- * 
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
 package org.virtue.game.map;
 
 /**
@@ -29,37 +8,90 @@ package org.virtue.game.map;
  * @since 31/10/2014
  */
 public class ClipFlag {
-	public static final int CORNERLOC_NORTHWEST = 0x1;//bit=0
-	public static final int WALL_NORTH = 0x2;//bit=1
-	public static final int CORNERLOC_NORTHEAST = 0x4;//bit=2
-	public static final int WALL_EAST = 0x8;//bit=3
-	public static final int CORNERLOC_SOUTHEAST = 0x10;//bit=4
-	public static final int WALL_SOUTH = 0x20;//bit=5
-	public static final int CORNERLOC_SOUTHWEST = 0x40;//bit=6
-	public static final int WALL_WEST = 0x80;//bit=7
-	public static final int LOC = 0x100;//bit=8
-	public static final int CORNERLOC_NORTHWEST_BLOCKSFLY = 0x200;//bit=9
-	public static final int WALL_NORTH_BLOCKSFLY = 0x400;//bit=10
-	public static final int CORNERLOC_NORTHEAST_BLOCKSFLY = 0x800;//bit=11
-	public static final int WALL_EAST_BLOCKSFLY = 0x1000;//bit=12
-	public static final int CORNERLOC_SOUTHEAST_BLOCKSFLY = 0x2000;//bit=13
-	public static final int WALL_SOUTH_BLOCKSFLY = 0x4000;//bit=14
-	public static final int CORNERLOC_SOUTHWEST_BLOCKSFLY = 0x8000;//bit=15
-	public static final int WALL_WEST_BLOCKSFLY = 0x10_000;//bit=16
-	public static final int LOC_BLOCKSFLY = 0x20_000;//bit=17
-	public static final int FLOORDECO_BLOCKSWALK = 0x40_000;//bit=18
+	
+	
 	public static final int UNKNOWN_19 = 0x80_000;
 	public static final int UNKNOWN_20 = 0x100_000;
-	public static final int FLOOR_BLOCKSWALK = 0x200_000;//bit=21
-	public static final int CORNERLOC_NORTHWEST_BLOCKSWALK_ALTERNATIVE = 0x400_000;//bit=22
-	public static final int WALL_NORTH_BLOCKSWALK_ALTERNATIVE = 0x800_000;//bit=23
-	public static final int CORNERLOC_NORTHEAST_BLOCKSWALK_ALTERNATIVE = 0x1_000_000;//bit=24
-	public static final int WALL_EAST_BLOCKSWALK_ALTERNATIVE = 0x2_000_000;//bit=25
-	public static final int CORNERLOC_SOUTHEAST_BLOCKSWALK_ALTERNATIVE = 0x4_000_000;//bit=26
-	public static final int WALL_SOUTH_BLOCKSWALK_ALTERNATIVE = 0x8_000_000;//bit=27
-	public static final int CORNERLOC_SOUTHWEST_BLOCKSWALK_ALTERNATIVE = 0x10_000_000;//bit=28
-	public static final int WALL_WEST_BLOCKSWALK_ALTERNATIVE = 0x20_000_000;//bit=29
-	public static final int LOC_BLOCKSWALK_ALTERNATIVE = 0x40_000_000;//bit=30
+	
+	public static final int FLOOR_BLOCKSWALK = 0x200000;//bit=21
+	public static final int FLOORDECO_BLOCKSWALK = 0x40000;//bit=18
+	
+	public static final int LOC = 0x100;//bit=8
+	public static final int LOC_BLOCKSFLY = 0x20000;//bit=17
+	public static final int LOC_BLOCKSWALK_ALTERNATIVE = 0x40000000;//bit=30
+	
+	public static final int WALL_NORTH = 0x2;//bit=1
+	public static final int WALL_EAST = 0x8;//bit=3
+	public static final int WALL_SOUTH = 0x20;//bit=5
+	public static final int WALL_WEST = 0x80;//bit=7
+	
+	public static final int CORNERLOC_NORTHWEST = 0x1;//bit=0
+	public static final int CORNERLOC_NORTHEAST = 0x4;//bit=2
+	public static final int CORNERLOC_SOUTHEAST = 0x10;//bit=4
+	public static final int CORNERLOC_SOUTHWEST = 0x40;//bit=6
+	
+	public static final int WALL_NORTH_BLOCKSFLY = 0x400;//bit=10
+	public static final int WALL_EAST_BLOCKSFLY = 0x1000;//bit=12
+	public static final int WALL_SOUTH_BLOCKSFLY = 0x4000;//bit=14
+	public static final int WALL_WEST_BLOCKSFLY = 0x10000;//bit=16
+	
+	public static final int CORNERLOC_NORTHWEST_BLOCKSFLY = 0x200;//bit=9
+	public static final int CORNERLOC_NORTHEAST_BLOCKSFLY = 0x800;//bit=11
+	public static final int CORNERLOC_SOUTHEAST_BLOCKSFLY = 0x2000;//bit=13
+	public static final int CORNERLOC_SOUTHWEST_BLOCKSFLY = 0x8000;//bit=15
+	
+	public static final int WALL_NORTH_BLOCKSWALK_ALTERNATIVE = 0x800000;//bit=23
+	public static final int WALL_EAST_BLOCKSWALK_ALTERNATIVE = 0x2000000;//bit=25
+	public static final int WALL_SOUTH_BLOCKSWALK_ALTERNATIVE = 0x8000000;//bit=27
+	public static final int WALL_WEST_BLOCKSWALK_ALTERNATIVE = 0x20000000;//bit=29
+	
+	public static final int CORNERLOC_NORTHWEST_BLOCKSWALK_ALTERNATIVE = 0x400000;//bit=22
+	public static final int CORNERLOC_NORTHEAST_BLOCKSWALK_ALTERNATIVE = 0x1000000;//bit=24
+	public static final int CORNERLOC_SOUTHEAST_BLOCKSWALK_ALTERNATIVE = 0x4000000;//bit=26
+	public static final int CORNERLOC_SOUTHWEST_BLOCKSWALK_ALTERNATIVE = 0x10000000;//bit=28
+	
+	////////////old////////////
+	//public static final int UNKNOWN_19 = 0x80_000;
+	//public static final int UNKNOWN_20 = 0x100_000;
+	
+	//public static final int FLOOR_BLOCKSWALK = 0x200_000;//bit=21
+	//public static final int FLOORDECO_BLOCKSWALK = 0x40_000;//bit=18
+	
+	//public static final int LOC = 0x100;//bit=8
+	//public static final int LOC_BLOCKSFLY = 0x20_000;//bit=17
+	//public static final int LOC_BLOCKSWALK_ALTERNATIVE = 0x40_000_000;//bit=30
+	
+	//public static final int WALL_NORTH = 0x2;//bit=1
+	//public static final int WALL_EAST = 0x8;//bit=3
+	//public static final int WALL_SOUTH = 0x20;//bit=5
+	//public static final int WALL_WEST = 0x80;//bit=7
+	
+	//public static final int CORNERLOC_NORTHWEST = 0x1;//bit=0
+	//public static final int CORNERLOC_NORTHEAST = 0x4;//bit=2
+	//public static final int CORNERLOC_SOUTHEAST = 0x10;//bit=4
+	//public static final int CORNERLOC_SOUTHWEST = 0x40;//bit=6
+	
+	//public static final int WALL_NORTH_BLOCKSFLY = 0x400;//bit=10
+	//public static final int WALL_EAST_BLOCKSFLY = 0x1000;//bit=12
+	//public static final int WALL_SOUTH_BLOCKSFLY = 0x4000;//bit=14
+	//public static final int WALL_WEST_BLOCKSFLY = 0x10_000;//bit=16
+	
+	//public static final int CORNERLOC_NORTHWEST_BLOCKSFLY = 0x200;//bit=9
+	//public static final int CORNERLOC_NORTHEAST_BLOCKSFLY = 0x800;//bit=11
+	//public static final int CORNERLOC_SOUTHEAST_BLOCKSFLY = 0x2000;//bit=13
+	//public static final int CORNERLOC_SOUTHWEST_BLOCKSFLY = 0x8000;//bit=15
+	
+	//public static final int WALL_NORTH_BLOCKSWALK_ALTERNATIVE = 0x800_000;//bit=23
+	//public static final int WALL_EAST_BLOCKSWALK_ALTERNATIVE = 0x2_000_000;//bit=25
+	//public static final int WALL_SOUTH_BLOCKSWALK_ALTERNATIVE = 0x8_000_000;//bit=27
+	//public static final int WALL_WEST_BLOCKSWALK_ALTERNATIVE = 0x20_000_000;//bit=29
+	
+	//public static final int CORNERLOC_NORTHWEST_BLOCKSWALK_ALTERNATIVE = 0x400_000;//bit=22
+	//public static final int CORNERLOC_NORTHEAST_BLOCKSWALK_ALTERNATIVE = 0x1_000_000;//bit=24
+	//public static final int CORNERLOC_SOUTHEAST_BLOCKSWALK_ALTERNATIVE = 0x4_000_000;//bit=26
+	//public static final int CORNERLOC_SOUTHWEST_BLOCKSWALK_ALTERNATIVE = 0x10_000_000;//bit=28
+	
+	
 	
 	public static final int CHECK_SOUTH = FLOOR_BLOCKSWALK | FLOORDECO_BLOCKSWALK | LOC | WALL_SOUTH;
 	

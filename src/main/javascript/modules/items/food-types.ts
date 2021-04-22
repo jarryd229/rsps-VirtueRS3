@@ -10,6 +10,11 @@ import { runAnim } from 'shared/anim';
 _events.bindEventListener(EventType.OPHELD1, 319, function(ctx) {//ANCHOVIES
 	foodheal(ctx.player, ctx.objId, 200, null);
 }); 
+
+_events.bindEventListener(EventType.OPHELD1, 1957, function(ctx) {//ONION
+	let healmsg = "You eat the onion.<br>It's always sad to see a grown man cry.";
+	foodheal(ctx.player, ctx.objId, 200, healmsg);
+});
  
 _events.bindEventListener(EventType.OPHELD1, 1965, function(ctx) {//CABBAGE
 	let healmsg = "You eat the Cabbage. Yuck!";
@@ -21,11 +26,6 @@ _events.bindEventListener(EventType.OPHELD1, 1967, function(ctx) {//DRAYNOR_CABB
 	foodheal(ctx.player, ctx.objId, 200, healmsg);
 });
  
-_events.bindEventListener(EventType.OPHELD1, 1957, function(ctx) {//ONION
-	let healmsg = "You eat the onion.<br>It's always sad to see a grown man cry.";
-	foodheal(ctx.player, ctx.objId, 200, healmsg);
-});
-
 _events.bindEventListener(EventType.OPHELD1, 2309, function(ctx) {//BREAD
 	foodheal(ctx.player, ctx.objId, 200, null);
 }); 

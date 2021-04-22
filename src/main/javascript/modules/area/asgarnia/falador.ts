@@ -1,32 +1,44 @@
-/**
- * Copyright (c) 2017 Virtue Studios
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
-import { EventType } from 'engine/enums/event-type';
+import { EventType, Stat } from 'engine/enums';
 import _events from 'engine/events';
+import _entity from 'engine/entity';
 import _map from 'engine/map';
  
 import { locationAnim, getLocShape, getLocRotation } from 'shared/map/location';
 import { runAnim } from 'shared/anim';
-import { multi3 } from 'shared/dialog';
+import { multi3, chatnpc } from 'shared/dialog';
+import _coords from 'shared/map/coords';
+import { defaultHandler } from 'shared/util';
+import { getStatLevel } from 'shared/stat';
+
+
+_events.bindEventListener(EventType.OPLOC1, 2113, async (ctx) => {//mining guild ladder (level 60 mining to enter)
+    if (getStatLevel(ctx.player, Stat.MINING) >= 60) {
+        if (_map.getCoordX(ctx.location) == 3019 && _map.getCoordY(ctx.location) == 3340) {//north ladder
+	        runAnim(ctx.player, 828, function () {
+                _entity.setCoords(ctx.player, _coords(3019, 9741, 0));
+	        });	
+	    } else if (_map.getCoordX(ctx.location) == 3020 && _map.getCoordY(ctx.location) == 3339) {//east ladder
+		    runAnim(ctx.player, 828, function () {
+                _entity.setCoords(ctx.player, _coords(3021, 9739, 0));
+	        });	
+	    } else if (_map.getCoordX(ctx.location) == 3019 && _map.getCoordY(ctx.location) == 3338) {//south ladder
+		    runAnim(ctx.player, 828, function () {
+                _entity.setCoords(ctx.player, _coords(3019, 9737, 0));
+	        });	
+        } else if (_map.getCoordX(ctx.location) == 3018 && _map.getCoordY(ctx.location) == 3339) {//west ladder
+		    runAnim(ctx.player, 828, function () {
+                _entity.setCoords(ctx.player, _coords(3017, 9739, 0));
+	        });			
+	    } else {
+		    defaultHandler(ctx, "ladder");
+	    } 
+    }else{
+	    await chatnpc(ctx.player, 3295, "Sorry, but you need level 60 Mining to go in there.");  	
+	}	
+});
+
+
+
 
 _events.bindEventListener(EventType.OPLOC1, 26194, (ctx) => {//party room lever
 	locationAnim(ctx.location, 6934);

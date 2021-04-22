@@ -41,10 +41,8 @@ public class ParserRepository {
 	 * The mysql Parser
 	 */
 	private MySQLParser mysql;
-        
     private Parser activeParser;
         
-	
 	/**
 	 * Loads the possible parsers into the repo
 	 */
@@ -55,7 +53,7 @@ public class ParserRepository {
             activeParser = (Parser) mysql;
         } else {
             activeParser = (Parser) xml;
-	    }   
+	    }
 	}
 	
 	public <T> T loadObject (Class<T> outputType, String name) {

@@ -1379,6 +1379,17 @@ function runSkillcape(player: Player) {
 			runAnim(player, 13190);
 			addSpotAnim(player, 2442);
 			return;
+		case 29185://Divination cape
+		case 29186:
+		case 31284:
+		case 34658:
+		    runAnim(player, 21241);
+			addSpotAnim(player, 4254);
+		    return;
+		case 36356://Invention Master Cape
+			runAnim(player, 27988);
+			addSpotAnim(player, 6001);
+			return;
 		case 24709://10yr. Vet Cape
 			runAnim(player, 17118);
 			addSpotAnim(player, 3227);
@@ -1397,10 +1408,6 @@ function runSkillcape(player: Player) {
 			return;
 		case 32152://Comp cape
 			runCompCape(player);
-			return;
-		case 36356://Invention Master Cape
-			runAnim(player, 27988);
-			addSpotAnim(player, 6001);
 			return;
 		default:
 			sendMessage(player, "You need to be wearing a Skill Cape in order to perform this emote.");

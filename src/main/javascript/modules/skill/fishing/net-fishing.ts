@@ -23,7 +23,7 @@ import { EventType, Stat } from 'engine/enums';
 import _events from 'engine/events';
 
 import { hasItem, giveItem } from 'shared/inv';
-import { sendSpamMessage } from 'shared/chat';
+import { sendMessage } from 'shared/chat';
 import { mesbox } from 'shared/dialog';
 
 import { runFishingAction } from './logic';
@@ -45,16 +45,16 @@ _events.bindEventListener(EventType.OPNPC1, [316, 319, 320, 323, 325, 326, 327],
 		return;
 	}
 	const animId = 24930;
-	sendSpamMessage(player, "You cast out your net...");
+	sendMessage(player, "You cast out your net...");
 	runFishingAction(player, ctx.npc, animId, 4, () => {
-		if (hasLevel(player, Stat.FISHING, 15) && randomStatChance(player, Stat.FISHING, 15, 120)) {
+		if (hasLevel(player, Stat.FISHING, 15) && randomStatChance(player, Stat.FISHING, 24, 128)) {
 			giveXp(player, Stat.FISHING, 40, false);
 			giveItem(player, 321);
-			sendSpamMessage(player, "You catch some anchovies.");
-		} else if (randomStatChance(player, Stat.FISHING, 40, 240)) {
+			sendMessage(player, "You catch some anchovies.");
+		} else if (randomStatChance(player, Stat.FISHING, 48, 256)) {
 			giveXp(player, Stat.FISHING, 10, false);
 			giveItem(player, 317);
-			sendSpamMessage(player, "You catch some shrimps.");
+			sendMessage(player, "You catch some shrimps.");
 		}
 		return true;
 	});
