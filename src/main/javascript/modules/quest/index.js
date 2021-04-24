@@ -1,6 +1,3 @@
-/**
- *
- */
 /* globals QUEST_ENGINE */
 var _config = require('engine/config');
 module.exports = init();

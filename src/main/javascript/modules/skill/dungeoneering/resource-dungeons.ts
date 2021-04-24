@@ -42,3 +42,11 @@ _events.bindEventListener(EventType.OPLOC1, 52856, (ctx) => {//Mysterious entran
 _events.bindEventListener(EventType.OPLOC1, 52866, (ctx) => {//Mysterious door mining guild hidden mine
 	_entity.setCoords(ctx.player, _coords(0,47,152,14,13));
 });
+
+_events.bindEventListener(EventType.OPLOC1, 94319, (ctx) => {//Mysterious entrance Meilyr
+	if (getStatLevel(ctx.player, Stat.DUNGEONEERING) >= 45) {
+        teleport(ctx.player, _coords(0,20,72,36,26),13288,2516,13285,2517);
+	}else{//"You receive 30000 Dungeoneering experience for uncovering a new dungeon for the first time.
+		sendMessage(ctx.player, "<col=ae0000>You need a Dungeoneering level of 45 to venture in there.");
+    }
+});

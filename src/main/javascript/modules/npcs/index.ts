@@ -1,4 +1,5 @@
 import './asgarnia';
+import './dungeons';
 import './events';
 import './kandarin';
 import './misthalin';

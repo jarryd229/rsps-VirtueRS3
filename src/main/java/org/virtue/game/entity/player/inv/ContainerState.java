@@ -34,6 +34,7 @@ public enum ContainerState {
     BOBS_AXES(1, true, false),
 	BOBS_AXES_FREE_STOCK(554, true, false),
     BRIANS_ARCHERY_SUPPLIES(250, true, false),
+	COEDENS_SEED_STORE(733, true, false),
     CULINAROMANCER_CHEST(375, true, false), //RFD Completed
     CULINAROMANCER_CHEST_FOOD(365, true, false),
     DAGAS_SHOP(251, true, false),

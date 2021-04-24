@@ -6,6 +6,7 @@ import './kandarin';
 import './kharidian-desert';
 import './misthalin';
 import './morytania';
+import './tirannwn';
 import './underground';
 import './ladders';
 import './location-picking';
